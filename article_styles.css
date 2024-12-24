@@ -1,0 +1,41 @@
+@import url('styles_home.css'); 
+
+:root {
+    --header-height: 100px; 
+}
+
+.article-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 40px;
+    margin: calc(var(--header-height) + 20px) auto 20px;
+    max-width: 900px; /* Max width for the article container */
+    text-align: justify; /* Justify content inside the container */
+}
+
+
+.article-title {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8; 
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify; 
+}
+
+
+.article-meta {
+    font-size: 14px;
+    color: #777;
+    text-align: right; 
+    margin-top: 20px;
+}

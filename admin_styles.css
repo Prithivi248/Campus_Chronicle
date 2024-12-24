@@ -1,0 +1,147 @@
+@import url('styles_home.css'); 
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 20px 60px;
+    margin: 0 auto;
+    overflow-y: auto; 
+}
+
+
+.articles-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.articles-table th, .articles-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.articles-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.articles-table td {
+    background-color: #fff;
+}
+
+
+.pending-article {
+    background-color: #ffefcc; 
+}
+
+
+.approve-btn, .reject-btn {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.approve-btn {
+    background-color: #28a745; 
+}
+
+.reject-btn {
+    background-color: #dc3545; 
+}
+
+.approve-btn:hover, .reject-btn:hover {
+    opacity: 0.8; 
+}
+
+/* Footer should stick to the bottom */
+footer {
+    background-image: linear-gradient(to left, #248de4, #0c5397);
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / .2);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+/* Table responsiveness */
+@media (max-width: 768px) {
+    .articles-table {
+        width: 100%;
+        overflow-x: auto; /* Horizontal scrolling for small screens */
+        display: block;
+    }
+}
+/* Dashboard container */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 40px;
+}
+
+
+.dashboard-box {
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 300px; 
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+/* Color variations for the boxes */
+.dashboard-box.users {
+    background-color: #4CAF50; /* Green for users */
+    color: white;
+}
+
+.dashboard-box.articles {
+    background-color: #FF9800; /* Orange for articles */
+    color: white;
+}
+
+.dashboard-box.categories {
+    background-color: #2196F3; /* Blue for categories */
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-box {
+        width: 90%; /* Full width for smaller screens */
+    }
+}
